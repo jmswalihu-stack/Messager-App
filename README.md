@@ -13,8 +13,8 @@ A simple real-time web messenger app using Node.js, Express, and Socket.IO, with
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/jmswalihu-stack/Messager-App.git
+cd Messager-App
 ```
 
 ### 2. Install dependencies
