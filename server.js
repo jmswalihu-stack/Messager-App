@@ -42,6 +42,12 @@ io.on('connection', (socket) => {
     messages.push(msg);
     io.emit('media message', msg);
   });
+
+    // Handle delete all messages
+    socket.on('delete all', () => {
+      messages = [];
+      io.emit('delete all');
+    });
 });
 
 // Start server

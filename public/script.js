@@ -3,6 +3,15 @@ const form = document.getElementById('form');
 const input = document.getElementById('input');
 const mediaInput = document.getElementById('media');
 const messagesDiv = document.getElementById('messages');
+const deleteAllBtn = document.getElementById('deleteAll');
+
+// Delete all messages
+deleteAllBtn.addEventListener('click', () => {
+  if (confirm('Are you sure you want to delete all messages?')) {
+    socket.emit('delete all');
+  }
+});
+
 // ngrok auth -- 
 // Render message to chat
 function addMessage(msg) {
@@ -31,6 +40,10 @@ socket.on('chat message', addMessage);
 
 // Receive media message
 socket.on('media message', addMessage);
+// Receive delete all event
+socket.on('delete all', () => {
+  messagesDiv.innerHTML = '';
+});
 
 // Send message or media
 form.addEventListener('submit', async (e) => {
