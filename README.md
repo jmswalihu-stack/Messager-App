@@ -31,16 +31,6 @@ node server.js
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### 4. Deploy to GitHub
-
-Commit your code and push to your GitHub repository:
-
-```bash
-git add .
-git commit -m "Initial commit"
-git push origin main
-```
-
 ## Notes
 
 - Uploaded media is saved in the `uploads/` folder and served statically.
